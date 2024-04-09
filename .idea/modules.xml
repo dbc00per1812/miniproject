@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HardwareStarterCode.iml" filepath="$PROJECT_DIR$/HardwareStarterCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniproject.iml" filepath="$PROJECT_DIR$/miniproject.iml" />
     </modules>
   </component>
 </project>
