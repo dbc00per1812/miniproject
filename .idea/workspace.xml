@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="99f0e162-c21e-402e-b5ef-3e4c7733c73d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/iu/c212/IStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/iu/c212/IStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/iu/c212/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/iu/c212/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/iu/c212/StoreMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/iu/c212/StoreMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/iu/c212/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/iu/c212/utils/FileUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +39,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -57,8 +63,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-a81d5c7c" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -71,6 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712694992892</updated>
       <workItem from="1712694993985" duration="1163000" />
+      <workItem from="1713835992985" duration="2406000" />
+      <workItem from="1713919229429" duration="8830000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ package edu.iu.c212.utils;
 import edu.iu.c212.models.*;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class FileUtils {
     }
 
 
-    public List<Staff> readStaffFromFile() throws IOException {
+    public static List<Staff> readStaffFromFile() throws IOException {
         // TODO
         List<Staff> staffList = new ArrayList<>();
         try (Scanner scanner = new Scanner(staffFile)) {
@@ -52,13 +53,35 @@ public class FileUtils {
         return staffList;
     }
 
-    public void writeInventoryToFile(List<Item> items) {
+    public static void writeInventoryToFile(List<Item> items) {
         // TODO
+        try{
+            FileWriter writer = new FileWriter(inventoryFile.getPath());
+
+            for(Item i : items)
+            {
+                writer.write(i.toString());
+            }
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
     public void writeStaffToFile(List<Staff> employees) {
         // TODO
+        try{
+            FileWriter writer = new FileWriter(staffFile.getPath());
+
+            for(Staff s : employees)
+            {
+                writer.write(s.toString());
+            }
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static List<String> readCommandsFromFile() throws IOException {
@@ -82,6 +105,13 @@ public class FileUtils {
 
     public static void writeLineToOutputFile(String line) {
         // TODO
+        try{
+            FileWriter writer = new FileWriter(outputFile.getPath());
+            writer.write(line);
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static Item parseItem(String s) {
