@@ -18,14 +18,14 @@ public class StaffScheduler {
             Map<String, String> shifts = FileUtils.readShiftSchedulesFromFile();
             Map<String, List<String>> schedule = createSchedule(staffList, shifts);
 
-            FileUtils.writeScheduleToFile(schedule, "store_schedule_OUT.txt");
+            FileUtils.writeStoreScheduleToFile(parseSchedule(schedule));
         } catch (IOException e) {
             System.err.println("Error in scheduling staff: " + e.getMessage());
         }
     }
 
     private Map<String, List<String>> createSchedule(List<Staff> staff, Map<String, String> shifts) {
-        Map<String, List<String>> schedule = new LinkedHashMap<>(); // Using LinkedHashMap to maintain the order
+        Map<String, List<String>> schedule = new LinkedHashMap<>();
         for (Map.Entry<String, String> entry : shifts.entrySet()) {
             String day = entry.getKey();
             List<String> availableStaffNames = new ArrayList<>();
@@ -34,7 +34,7 @@ public class StaffScheduler {
                     availableStaffNames.add(formatStaffName(s.getName()));
                 }
             }
-            Collections.sort(availableStaffNames); // Sort staff names alphabetically
+            Collections.sort(availableStaffNames);
             schedule.put(day, availableStaffNames);
         }
         return schedule;
@@ -43,5 +43,17 @@ public class StaffScheduler {
     private String formatStaffName(String fullName) {
         String lastNameInitial = fullName.substring(fullName.lastIndexOf(' ') + 1, fullName.lastIndexOf(' ') + 2);
         return fullName.substring(0, fullName.lastIndexOf(' ')) + " " + lastNameInitial;
+    }
+
+    private List<String> parseSchedule(Map<String, List<String>> s) {
+        List<String> schedule = new ArrayList<String>();
+
+        for(Map.Entry<String, List<String>> entry : s.entrySet())
+        {
+            String temp;
+            temp = entry.toString().replace("=", "");
+            schedule.add(temp);
+        }
+        return schedule;
     }
 }
